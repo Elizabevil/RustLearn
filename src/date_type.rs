@@ -1,5 +1,5 @@
 
-fn main() {
+fn date_type() {
     // addition
     let sum = 5 + 10;
 

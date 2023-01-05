@@ -1,12 +1,14 @@
-mod date_type;
+
 mod ownership;
 mod slice;
+mod date_type;
+
 
 fn main() {
     shield();
 }
 
-fn basic() {
+ fn basic() {
     println!("Hello, world!");
     let x = 5;
     let mut y = 5;

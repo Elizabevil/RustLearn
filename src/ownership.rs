@@ -31,7 +31,7 @@ fn mutable_references() {
     // println!("{}, {}", r1, r2);
 }
 
-fn change(some_string: &mut String) {
+pub fn change(some_string: &mut String) {
     some_string.push_str(", world");
 }
 
