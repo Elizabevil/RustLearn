@@ -2,7 +2,7 @@ mod date_type;
 mod ownership;
 
 fn main() {
-    shield()
+    shield();
 }
 
 fn basic() {
