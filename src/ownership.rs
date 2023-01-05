@@ -48,6 +48,28 @@ fn dsasd() {
     let r1 = &s; // 没问题
     let r2 = &s; // 没问题
     let r3 = &mut s; // 大问题
-
     println!("{}, {}, and {}", r1, r2, r3);
+
+    // 修复
+
+    let mut s = String::from("hello");
+
+    let r1 = &s; // 没问题
+    let r2 = &s; // 没问题
+    println!("{} and {}", r1, r2);
+    // 此位置之后 r1 和 r2 不再使用
+
+    let r3 = &mut s; // 没问题
+    println!("{}", r3);
 }
+
+
+// 悬垂引用（Dangling References）其指向的内存可能已经被分配给其它持有者
+fn dangle() -> String { // dangle 返回一个字符串的引用
+
+    let s = String::from("hello"); // s 是一个新字符串
+
+    // &s // 返回字符串 s 的引用
+    s //修改
+} // 这里 s 离开作用域并被丢弃。其内存被释放。
+// 危险！

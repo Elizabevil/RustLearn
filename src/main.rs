@@ -1,5 +1,6 @@
 mod date_type;
 mod ownership;
+mod slice;
 
 fn main() {
     shield();
