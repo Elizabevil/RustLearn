@@ -14,9 +14,9 @@ fn main() {
 
 fn simple_copy() {
     let s1 = String::from("hello");
-    let s2 = s1;
+    let s2 = s1.clone();
     println!("{}\n{}", s1, s2);
-    s1.push_str("1");
+    // s1.push_str("1");
     println!("{}\n{}", s1, s2);
 }
 
@@ -47,8 +47,8 @@ fn dsasd() {
     // 同时使用可变与不可变引用中 会报错
     let r1 = &s; // 没问题
     let r2 = &s; // 没问题
-    let r3 = &mut s; // 大问题
-    println!("{}, {}, and {}", r1, r2, r3);
+    // let r3 = &mut s; // 大问题
+    println!("{}, {}, and ", r1, r2 );
 
     // 修复
 
