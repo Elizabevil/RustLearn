@@ -1,6 +1,5 @@
 fn slice_show() {
     let s = String::from("hello");
-
     let len = s.len();
     let slice = &s[0..2];
     let slice = &s[..2];
