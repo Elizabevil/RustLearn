@@ -7,7 +7,13 @@ pub struct User {
     pub(crate) username: String,
     pub(crate) email: String,
     pub(crate) sign_in_count: u64,
+}
 
+impl User {
+    fn to_string(&self) -> &str {
+        let string = &*self.username + &*self.email;
+        return string;
+    }
 }
 
 /*
@@ -49,6 +55,8 @@ pub fn user_test() {
     println!("{}", user.username);
     println!("{:?}", user.email);
 }
+
+
 //  枚举类型是一个类型，它会包含所有可能的枚举成员, 而枚举值是该类型中的具体某个成员的实例。
 enum Message {
     Quit,

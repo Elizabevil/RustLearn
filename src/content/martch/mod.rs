@@ -1,3 +1,6 @@
+pub mod mode;
+pub mod full;
+
 pub enum Direction {
     East,
     West,
@@ -53,16 +56,16 @@ pub fn action_test() {
         Action::MoveTo(1, 2),
         Action::ChangeColorRGB(255, 255, 0),
     ];
-/*    只匹配一项，其余直接忽略
-    if let Some(3) = v {
-        println!("three");
-    }
+    /*    只匹配一项，其余直接忽略
+        if let Some(3) = v {
+            println!("three");
+        }
 
-    let v = Some(3u8);
-    match v {
-        Some(3) => println!("three"),
-        _ => (),
-    }*/
+        let v = Some(3u8);
+        match v {
+            Some(3) => println!("three"),
+            _ => (),
+        }*/
 
     for action in actions {
         match action {
