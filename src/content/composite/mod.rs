@@ -12,4 +12,5 @@ unimplemented!() 标记通常意味着我们期望快速完成主要代码，回
 */
 pub mod string;
 pub mod tup;
-mod r#struct;
+pub mod rstruct;
+pub mod rarray;
