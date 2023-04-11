@@ -15,12 +15,7 @@ impl method::Rectangle {
     }
 }
 
-//Rust 允许我们为一个结构体定义多个 impl 块
-impl method::Rectangle {
-    fn can_hold(&self, other: &method::Rectangle) -> bool {
-        self.width > other.width && self.height > other.height
-    }
-}
+
 // self 、 & self 和 & mut self
 // self 表示 Rectangle 的所有权转移到该方法中，这种形式用的较少
 // &self  表示该方法对 Rectangle 的不可变借用 // &self 其实是 self: &Self

@@ -1,11 +1,11 @@
-fn VAr() {
+fn var() {
     // 默认不可变，而且自始至终不可变+类型推断
     let y = 5;
     let mut x = 5;
     println!("The value of x is: {}", x);
     x = 6;
 
-    let _x = 5;//不要警告未使用的变量
+    let _x = 5; //不要警告未使用的变量
 }
 
 struct Struct {
@@ -21,7 +21,7 @@ fn variable_deconstruction() {
     assert_eq!(a, b);
     println!("在 Rust 1.59 版本后，我们可以在赋值语句的左式中使用元组、切片和结构体模式了");
 
-    let (a, b, c, d, e);
+    let (a, b, c, d, e) ;
 
     (a, b) = (1, 2);
     // _ 代表匹配一个值，但是我们不关心具体的值是什么，因此没有使用一个变量名而是使用了 _
@@ -52,10 +52,10 @@ fn shadowing() {
     }
 
     println!("The value of x is: {}", x); //6
-    println!("同一个变量名：-------但值与类型都不同--------", );
+    println!("同一个变量名：-------但值与类型都不同--------",);
 
     // 字符串类型
     let spaces = "   ";
-// usize数值类型
+    // usize数值类型
     let spaces = spaces.len();
 }

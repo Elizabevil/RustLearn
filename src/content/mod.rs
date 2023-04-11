@@ -4,3 +4,4 @@ pub mod base;
 pub mod martch;
 pub mod rstruct;
 pub mod generics;
+pub mod contain;

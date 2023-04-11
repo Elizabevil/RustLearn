@@ -3,15 +3,15 @@
 //把结构体中具有所有权的字段转移出去后，将无法再访问该字段，但是可以正常访问其它的字段。
 #[derive(Debug)]
 pub struct User {
-    pub(crate) active: bool,
-    pub(crate) username: String,
-    pub(crate) email: String,
-    pub(crate) sign_in_count: u64,
+    pub active: bool,
+    pub username: String,
+    pub email: String,
+    pub sign_in_count: u64,
 }
 
 impl User {
-    fn to_string(&self) -> &str {
-        let string = &*self.username + &*self.email;
+    fn to_string(&self) -> String {
+        let string = self.username.to_string() + &*self.email.to_string();
         return string;
     }
 }
